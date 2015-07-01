@@ -1,0 +1,19 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+    </style>
+
+    <style name="StartupTheme" parent="android:Theme.Light">
+        <item name="android:windowBackground">@drawable/welcome_bg</item> //@null黑屏  @drawable/icon放一张启动图片
+        <item name="android:windowNoTitle">true</item> //启动界面是否显示应用名称 true不显示 false显示
+        <item name="android:windowFullscreen">true</item>
+    </style>
+
+    <style name="CustomTitleBarTheme" parent="android:Theme">
+        <item name="android:windowTitleSize">@dimen/distance_50dp</item>
+        <item name="android:windowTitleBackgroundStyle">@color/deep_blue</item>
+    </style>
+
+</resources>
