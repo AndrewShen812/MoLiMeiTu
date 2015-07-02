@@ -1,6 +1,6 @@
 package com.molimeitu;
 
-import android.graphics.drawable.BitmapDrawable;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
 import android.support.v4.widget.DrawerLayout;
@@ -13,7 +13,7 @@ import android.widget.LinearLayout;
 import android.widget.Toast;
 
 import com.molimeitu.adapter.AdPageAdapter;
-import com.molimeitu.util.ImageUtils;
+import com.molimeitu.view.CreateOrderActivity;
 
 import java.util.ArrayList;
 
@@ -42,7 +42,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     private LinearLayout mLayoutAbout;
 
-    private ImageView mIvHead;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -107,7 +107,7 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
      * 初始化UI组件
      */
     private void initView() {
-        setTitle("摩利美涂");
+        setTitle(R.string.title_activity_main);
         setNavBackIcon(R.drawable.usercenter);
         mDrawerLayout = (DrawerLayout) findViewById(R.id.dl_main);
         // 设置锁定，不响应滑动，设置为只有点击触发
@@ -116,21 +116,16 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
         mLayoutView = (LinearLayout) findViewById(R.id.ll_main_view_order);
         mLayoutFeedBack = (LinearLayout) findViewById(R.id.ll_main_feedback);
         mLayoutAbout = (LinearLayout) findViewById(R.id.ll_main_about);
-        mIvHead = (ImageView) findViewById(R.id.iv_main_drawer_left_head);
 
         mLayoutOrder.setOnClickListener(this);
         mLayoutView.setOnClickListener(this);
         mLayoutFeedBack.setOnClickListener(this);
         mLayoutAbout.setOnClickListener(this);
-
-        mIvHead.setImageBitmap(ImageUtils.getRoundBitmap(((BitmapDrawable)mContext.getResources().getDrawable(R.drawable.app_icon)).getBitmap()));
     }
 
     @Override
     public void onNavBack() {
-//        super.onNavBack();
-        // 将抽屉打开
-
+        // 将抽屉打开或关闭
         if (mDrawerLayout.isDrawerOpen(Gravity.LEFT)) {
             mDrawerLayout.closeDrawer(Gravity.LEFT);
         }
@@ -158,18 +153,27 @@ public class MainActivity extends BaseActivity implements View.OnClickListener {
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch(v.getId()) {
             case R.id.ll_main_order:
-
+//                Toast.makeText(mContext, "下单功能暂未开放", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, CreateOrderActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_main_view_order:
-
+//                Toast.makeText(mContext, "订单查看功能暂未开放", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, OrderListActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_main_feedback:
-
+//                Toast.makeText(mContext, "信息反馈功能暂未开放", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, FeedBackActivity.class);
+                startActivity(intent);
                 break;
             case R.id.ll_main_about:
-
+//                Toast.makeText(mContext, "关于App功能暂未开放", Toast.LENGTH_SHORT).show();
+                intent = new Intent(mContext, AboutAppActivity.class);
+                startActivity(intent);
                 break;
         }
     }

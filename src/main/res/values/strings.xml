@@ -2,8 +2,14 @@
 <resources>
 
     <string name="app_name">MoLiMeiTu</string>
-    <string name="title_activity_main">MainActivity</string>
+    <string name="title_activity_main">摩利美涂</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
+    <string name="title_activity_edit_usr_info">编辑用户信息</string>
+    <string name="title_activity_feed_back">信息反馈</string>
+    <string name="feed_back_auto_reply">您的建议是我们前进的动力，摩利美涂期待听到您的声音！</string>
+    <string name="title_activity_about_app">关于App</string>
+    <string name="title_activity_order_list">我的订单</string>
+    <string name="title_activity_create_order">创建订单</string>
 
 </resources>

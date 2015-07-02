@@ -1,0 +1,58 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    android:orientation="vertical"
+    tools:context="com.molimeitu.AboutAppActivity">
+
+    <ImageView
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:scaleType="fitCenter"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:src="@drawable/app_icon"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/distance_10dp"
+        android:text="扫描上方二维码即可下载App"
+        android:textColor="@color/font_major"
+        android:textSize="@dimen/font_size_18sp"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_1dp"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:background="@color/line_color"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_50dp"
+        android:layout_gravity="center_horizontal"
+        android:text="摩利美涂App V1.0.0.1"
+        android:textSize="@dimen/font_size_18sp"
+        android:textColor="@color/font_major"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="联系方式：13548111470"
+        android:textSize="@dimen/font_size_18sp"
+        android:textColor="@color/font_major"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="邮箱：13548111470@139.com"
+        android:textSize="@dimen/font_size_18sp"
+        android:textColor="@color/font_major"/>
+
+</LinearLayout>

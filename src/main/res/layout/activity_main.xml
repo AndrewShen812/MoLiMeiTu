@@ -60,7 +60,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="查订单"
+                    android:text="查看订单"
                     android:textSize="@dimen/font_size_18sp"
                     android:textColor="@color/font_major"/>
             </LinearLayout>
@@ -95,7 +95,7 @@
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="关于"
+                    android:text="关于App"
                     android:textSize="@dimen/font_size_18sp"
                     android:textColor="@color/font_major"/>
             </LinearLayout>
@@ -103,10 +103,11 @@
 
     </LinearLayout>
 
-    <include
+    <fragment
+        android:name="com.molimeitu.DrawerFragment"
         android:layout_width="150dp"
         android:layout_height="match_parent"
         android:layout_gravity="left"
-        layout="@layout/layout_drawer_left"/>
+        tools:layout="@layout/layout_drawer_left" />
 
 </android.support.v4.widget.DrawerLayout>

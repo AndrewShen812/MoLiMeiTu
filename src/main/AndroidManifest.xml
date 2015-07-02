@@ -21,6 +21,26 @@
             android:name=".MainActivity"
             android:label="@string/title_activity_main" >
         </activity>
+        <activity
+            android:name=".EditUsrInfoActivity"
+            android:label="@string/title_activity_edit_usr_info" >
+        </activity>
+        <activity
+            android:name=".FeedBackActivity"
+            android:label="@string/title_activity_feed_back" >
+        </activity>
+        <activity
+            android:name=".AboutAppActivity"
+            android:label="@string/title_activity_about_app" >
+        </activity>
+        <activity
+            android:name=".OrderListActivity"
+            android:label="@string/title_activity_order_list" >
+        </activity>
+        <activity
+            android:name=".view.CreateOrderActivity"
+            android:label="@string/title_activity_create_order" >
+        </activity>
     </application>
 
 </manifest>

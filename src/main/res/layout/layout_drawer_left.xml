@@ -4,7 +4,8 @@
     android:layout_width="200dp"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:background="@color/dark_gray">
+    android:padding="@dimen/distance_5dp"
+    android:background="@color/gray">
 
     <LinearLayout
         android:layout_width="wrap_content"
@@ -13,34 +14,54 @@
 
         <ImageView
             android:id="@+id/iv_main_drawer_left_head"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginTop="@dimen/distance_10dp"
+            android:layout_width="@dimen/distance_40dp"
+            android:layout_height="@dimen/distance_40dp"
+            android:scaleType="centerCrop"
+            android:layout_marginTop="@dimen/distance_5dp"
             android:src="@drawable/app_icon"/>
-
-        <!--<com.molimeitu.view.RoundImageView-->
-        <!--android:layout_width="wrap_content"-->
-        <!--android:layout_height="wrap_content"-->
-        <!--android:src="@drawable/app_icon"/>-->
     </LinearLayout>
 
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_drawer_name"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/distance_10dp"
-        android:text="登陆"
-        android:textColor="@color/font_major"/>
+        android:gravity="left"
+        android:text="申勇"
+        android:textColor="@color/font_major"
+        android:visibility="gone"/>
     <TextView
-        android:layout_width="wrap_content"
+        android:id="@+id/tv_drawer_tel"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/distance_10dp"
-        android:text="分享"
-        android:textColor="@color/font_major"/>
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:gravity="left"
+        android:text="13548111470"
+        android:textColor="@color/font_major"
+        android:visibility="gone"/>
+
     <TextView
+        android:id="@+id/tv_drawer_addr"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/distance_5dp"
+        android:gravity="left"
+        android:text="成都市金牛区一环路北一段99号"
+        android:textColor="@color/font_major"
+        android:visibility="gone"/>
+
+    <Button
+        android:id="@+id/btn_drawer_edit_usr_info"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/distance_10dp"
-        android:text="关于"
-        android:textColor="@color/font_major"/>
+        android:paddingTop="@dimen/distance_5dp"
+        android:paddingBottom="@dimen/distance_5dp"
+        android:paddingLeft="@dimen/distance_10dp"
+        android:paddingRight="@dimen/distance_10dp"
+        android:text="完善个人信息"
+        android:textColor="@color/font_major"
+        android:background="@drawable/selector_btn_bg_round"/>
 
 </LinearLayout>

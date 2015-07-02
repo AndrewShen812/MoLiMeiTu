@@ -1,0 +1,54 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.molimeitu.FeedBackActivity"
+    android:background="@color/light_gray">
+
+    <ListView
+        android:id="@+id/lv_fb_chat_list"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/view_fb_gap_line"></ListView>
+
+    <View
+        android:id="@+id/view_fb_gap_line"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/distance_1dp"
+        android:layout_above="@+id/ll_feedback_send"
+        android:background="@color/line_color"/>
+
+    <LinearLayout
+        android:id="@+id/ll_feedback_send"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:padding="@dimen/distance_15dp"
+        android:orientation="horizontal">
+
+        <EditText
+            android:id="@+id/et_fb_input"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:padding="@dimen/distance_10dp"
+            android:layout_marginRight="@dimen/distance_5dp"
+            android:hint="说点什么吧"
+            android:textSize="@dimen/font_size_15sp"
+            android:textColor="@color/font_major"
+            android:background="@drawable/shape_round"/>
+
+        <Button
+            android:id="@+id/btn_fb_send"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:padding="@dimen/distance_10dp"
+            android:background="@drawable/selector_btn_bg_round"
+            android:text="发送"
+            android:textSize="@dimen/font_size_18sp"
+            android:textColor="@color/font_major"/>
+
+    </LinearLayout>
+
+</RelativeLayout>

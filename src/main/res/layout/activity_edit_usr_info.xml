@@ -1,0 +1,99 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.molimeitu.EditUsrInfoActivity"
+    android:padding="@dimen/distance_10dp"
+    android:background="@color/light_gray"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/distance_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:text="姓名"
+            style="@style/InputTipsStyle"/>
+
+        <EditText
+            style="@style/InputStyle"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:padding="@dimen/distance_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:text="电话"
+            style="@style/InputTipsStyle"/>
+
+        <EditText
+            style="@style/InputStyle"
+            android:inputType="numberDecimal"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:padding="@dimen/distance_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:text="密码"
+            style="@style/InputTipsStyle"/>
+
+        <EditText
+            style="@style/InputStyle"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:padding="@dimen/distance_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:text="确认密码"
+            style="@style/InputTipsStyle"/>
+
+        <EditText
+            style="@style/InputStyle"
+            android:inputType="textPassword"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="-2dp"
+        android:padding="@dimen/distance_10dp"
+        android:orientation="horizontal"
+        android:background="@drawable/shape_rectangle">
+        <TextView
+            android:text="送货地址"
+            style="@style/InputTipsStyle"/>
+
+        <EditText
+            style="@style/InputStyle"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_edit_usr_info_save"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginTop="@dimen/distance_30dp"
+        android:padding="@dimen/distance_10dp"
+        android:text="保  存"
+        android:textColor="@color/font_major"
+        android:textSize="@dimen/font_size_18sp"
+        android:background="@drawable/selector_btn_bg_round"/>
+
+</LinearLayout>
