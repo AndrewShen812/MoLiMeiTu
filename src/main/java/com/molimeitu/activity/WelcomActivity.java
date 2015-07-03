@@ -1,14 +1,13 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
 import android.app.Activity;
 import android.content.Context;
 import android.content.Intent;
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager;
+
+import com.molimeitu.R;
 
 import java.util.Timer;
 import java.util.TimerTask;

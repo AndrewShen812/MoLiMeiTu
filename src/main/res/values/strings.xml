@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">MoLiMeiTu</string>
+    <string name="app_name">摩利美涂</string>
     <string name="title_activity_main">摩利美涂</string>
     <string name="hello_world">Hello world!</string>
     <string name="action_settings">Settings</string>
@@ -11,5 +11,6 @@
     <string name="title_activity_about_app">关于App</string>
     <string name="title_activity_order_list">我的订单</string>
     <string name="title_activity_create_order">创建订单</string>
+    <string name="title_activity_create_order_success">创单提示</string>
 
 </resources>

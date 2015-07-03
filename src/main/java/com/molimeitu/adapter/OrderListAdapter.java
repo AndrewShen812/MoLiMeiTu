@@ -45,7 +45,7 @@ public class OrderListAdapter extends BaseArrayAdapter<OrderModel> {
             item = (ViewHolder) convertView.getTag();
         }
         OrderModel order = mList.get(position);
-        item.mTvCreateTime.setText(order.createTime);
+        item.mTvCreateTime.setText("下单时间：" + order.createTime);
         item.mTvOrderNo.setText("订单号：" + order.orderNo);
         item.mTvContact.setText(order.contact.name);
         item.mTvTel.setText(order.contact.tel);

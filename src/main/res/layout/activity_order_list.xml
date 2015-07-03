@@ -5,7 +5,7 @@
     android:background="@color/light_gray"
     android:padding="@dimen/distance_10dp"
     android:orientation="vertical"
-    tools:context="com.molimeitu.OrderListActivity">
+    tools:context="com.molimeitu.activity.OrderListActivity">
 
     <LinearLayout
         android:layout_width="match_parent"

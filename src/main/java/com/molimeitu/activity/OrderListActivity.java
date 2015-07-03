@@ -1,13 +1,11 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.molimeitu.R;
 import com.molimeitu.adapter.OrderListAdapter;
 import com.molimeitu.model.OrderModel;
 

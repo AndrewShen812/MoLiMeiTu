@@ -1,4 +1,4 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
 import android.app.Fragment;
 import android.content.BroadcastReceiver;
@@ -15,8 +15,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 
+import com.alibaba.fastjson.JSON;
+import com.molimeitu.R;
 import com.molimeitu.consts.IntentAction;
+import com.molimeitu.model.UserModel;
 import com.molimeitu.util.ImageUtils;
+import com.molimeitu.util.business.ConfigUtils;
 
 /**
  * 项目名称：LianfengApp
@@ -42,12 +46,14 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
 
     private EditUsrInfoReceiver mEditReceiver;
 
+    private UserModel mUser;
+
     @Nullable
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         View layout = inflater.inflate(R.layout.layout_drawer_left, container, false);
         initView(layout);
-
+        initData();
         return layout;
     }
 
@@ -59,6 +65,15 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         mTvAddr = (TextView) layout.findViewById(R.id.tv_drawer_addr);
         mBtnEditUsrInfo = (Button) layout.findViewById(R.id.btn_drawer_edit_usr_info);
         mBtnEditUsrInfo.setOnClickListener(this);
+    }
+
+    private void initData() {
+        try {
+            mUser = JSON.parseObject(ConfigUtils.getUserInfo(getActivity()), UserModel.class);
+            fillWithData(mUser);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
     }
 
     @Override
@@ -87,14 +102,25 @@ public class DrawerFragment extends Fragment implements View.OnClickListener {
         public void onReceive(Context context, Intent intent) {
             String action = intent.getAction();
             if (IntentAction.FINISH_EDIT.equals(action)) {
-                mTvName.setText(intent.getStringExtra(EditUsrInfoActivity.KEY_NAME));
-                mTvPhone.setText(intent.getStringExtra(EditUsrInfoActivity.KEY_TEL));
-                mTvAddr.setText(intent.getStringExtra(EditUsrInfoActivity.KEY_ADDR));
-                mTvName.setVisibility(View.VISIBLE);
-                mTvPhone.setVisibility(View.VISIBLE);
-                mTvAddr.setVisibility(View.VISIBLE);
+                mUser = (UserModel) intent.getSerializableExtra(EditUsrInfoActivity.KEY_USER);
+                fillWithData(mUser);
                 mBtnEditUsrInfo.setText("编辑信息");
             }
+        }
+    }
+
+    /**
+     * 填充用户信息并显示
+     * @param user
+     */
+    private void fillWithData(UserModel user) {
+        if (null != user) {
+            mTvName.setText(user.name);
+            mTvPhone.setText(user.tel);
+            mTvAddr.setText(user.addr);
+            mTvName.setVisibility(View.VISIBLE);
+            mTvPhone.setVisibility(View.VISIBLE);
+            mTvAddr.setVisibility(View.VISIBLE);
         }
     }
 }

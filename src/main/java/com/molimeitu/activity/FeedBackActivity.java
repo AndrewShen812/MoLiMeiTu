@@ -1,15 +1,13 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
-import android.support.v7.app.ActionBarActivity;
 import android.os.Bundle;
-import android.view.Menu;
-import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.molimeitu.R;
 import com.molimeitu.adapter.FeedBackChatAdapter;
 import com.molimeitu.model.ChatModel;
 import com.molimeitu.util.StringUtils;

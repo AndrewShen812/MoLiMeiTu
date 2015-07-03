@@ -22,6 +22,8 @@ public class OrderModel implements Serializable {
 
     public String orderDetail;
 
+    public String remark;
+
     public OrderModel() {
         contact = new ContactModel();
     }

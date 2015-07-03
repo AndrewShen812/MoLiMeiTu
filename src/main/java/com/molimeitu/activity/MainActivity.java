@@ -1,4 +1,4 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
 import android.content.Intent;
 import android.os.Bundle;
@@ -12,8 +12,8 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.molimeitu.R;
 import com.molimeitu.adapter.AdPageAdapter;
-import com.molimeitu.view.CreateOrderActivity;
 
 import java.util.ArrayList;
 

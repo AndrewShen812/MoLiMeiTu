@@ -1,4 +1,4 @@
-package com.molimeitu;
+package com.molimeitu.activity;
 
 import android.app.Activity;
 import android.content.Context;
@@ -10,6 +10,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.molimeitu.R;
 import com.molimeitu.util.StringUtils;
 
 /**

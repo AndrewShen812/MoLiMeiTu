@@ -1,0 +1,30 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/light_gray"
+    tools:context="com.molimeitu.activity.CreateOrderSuccessActivity">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="@dimen/distance_50dp"
+        android:drawableLeft="@drawable/ic_ok_smile_l"
+        android:drawablePadding="@dimen/distance_10dp"
+        android:text="订单提交成功！\n等待厂家处理~"
+        android:textSize="@dimen/font_size_25sp"
+        android:textColor="@color/green"/>
+
+    <TextView
+        android:id="@+id/tv_create_success_count_down"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:drawableLeft="@drawable/ic_cnt_down"
+        android:gravity="center"
+        android:text="10秒后将自动返回首页"
+        android:textSize="@dimen/font_size_20sp"
+        android:textColor="@color/font_minor"/>
+
+</RelativeLayout>

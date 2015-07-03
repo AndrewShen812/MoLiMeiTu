@@ -4,12 +4,13 @@
     android:layout_height="match_parent"
     android:background="@color/light_gray"
     android:orientation="vertical"
-    tools:context="com.molimeitu.AboutAppActivity">
+    tools:context="com.molimeitu.activity.AboutAppActivity">
 
     <ImageView
+        android:id="@+id/iv_about_qrcode"
         android:layout_width="200dp"
         android:layout_height="200dp"
-        android:scaleType="fitCenter"
+        android:scaleType="fitXY"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/distance_20dp"
         android:src="@drawable/app_icon"/>
@@ -29,6 +30,7 @@
         android:background="@color/line_color"/>
 
     <TextView
+        android:id="@+id/tv_about_app_version"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="@dimen/distance_50dp"
