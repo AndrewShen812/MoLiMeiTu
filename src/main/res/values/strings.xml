@@ -12,5 +12,6 @@
     <string name="title_activity_order_list">我的订单</string>
     <string name="title_activity_create_order">创建订单</string>
     <string name="title_activity_create_order_success">创单提示</string>
+    <string name="title_activity_select_product">产品选择</string>
 
 </resources>

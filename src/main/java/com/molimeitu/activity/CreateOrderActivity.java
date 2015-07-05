@@ -17,6 +17,8 @@ import com.molimeitu.R;
 import com.molimeitu.consts.ReqCode;
 import com.molimeitu.model.OrderModel;
 import com.molimeitu.util.IntentUtils;
+import com.molimeitu.util.StringUtils;
+import com.molimeitu.util.ToastUtils;
 import com.molimeitu.util.business.ConfigUtils;
 
 public class CreateOrderActivity extends BaseActivity implements View.OnClickListener {
@@ -66,10 +68,15 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
     private void initData() {
         try {
             mOrder = JSON.parseObject(ConfigUtils.getOrderInfo(mContext), OrderModel.class);
-            mEtName.setText(mOrder.contact.name);
-            mEtPhone.setText(mOrder.contact.tel);
-            mEtAddr.setText(mOrder.contact.addr);
-            mEtRemark.setText(mOrder.remark);
+            if (null == mOrder) {
+                mOrder = new OrderModel();
+            }
+            else {
+                mEtName.setText(mOrder.contact.name);
+                mEtPhone.setText(mOrder.contact.tel);
+                mEtAddr.setText(mOrder.contact.addr);
+                mEtRemark.setText(mOrder.remark);
+            }
         } catch (Exception e) {
             e.printStackTrace();
         }
@@ -138,7 +145,23 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
     }
 
     private boolean checkOrderData() {
+        mOrder.contact.name = mEtName.getText().toString().trim();
+        mOrder.contact.tel = mEtPhone.getText().toString().trim();
+        mOrder.contact.addr = mEtAddr.getText().toString().trim();
+        mOrder.remark = mEtRemark.getText().toString().trim();
 
+        if (StringUtils.isEmpty(mOrder.contact.name)) {
+            ToastUtils.showToast(mContext, "请输入联系人姓名");
+            return false;
+        }
+        if (!StringUtils.isValidPhone(mOrder.contact.tel)) {
+            ToastUtils.showToast(mContext, "请输入正确的联系人电话");
+            return false;
+        }
+        if (StringUtils.isEmpty(mOrder.contact.addr)) {
+            ToastUtils.showToast(mContext, "请输入收货地址");
+            return false;
+        }
 
         return true;
     }

@@ -99,11 +99,11 @@ public class EditUsrInfoActivity extends BaseActivity implements View.OnClickLis
         String confirmPwd = mEtConfirm.getText().toString().trim();
         mUser.addr = mEtAddr.getText().toString().trim();
         if (StringUtils.isEmpty(mUser.name)) {
-            ToastUtils.showToast(mContext, "请输入用户名");
+            ToastUtils.showToast(mContext, "请输入用姓名");
             return false;
         }
-        else if (StringUtils.isEmpty(mUser.tel)) {
-            ToastUtils.showToast(mContext, "请输入电话");
+        else if (!StringUtils.isValidPhone(mUser.tel)) {
+            ToastUtils.showToast(mContext, "请输入正确的电话号码");
             return false;
         }
         else if (StringUtils.isEmpty(mUser.pwd)) {

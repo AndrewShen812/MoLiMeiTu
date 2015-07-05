@@ -49,6 +49,10 @@
             android:name=".activity.CreateOrderSuccessActivity"
             android:label="@string/title_activity_create_order_success" >
         </activity>
+        <activity
+            android:name=".activity.SelectProductActivity"
+            android:label="@string/title_activity_select_product" >
+        </activity>
     </application>
 
 </manifest>
