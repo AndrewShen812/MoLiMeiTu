@@ -84,9 +84,11 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
 
     @Override
     public void onClick(View v) {
+        Intent intent = null;
         switch (v.getId()) {
             case R.id.ll_create_order_product_select_tip:
-
+                intent = new Intent(mContext, SelectProductActivity.class);
+                startActivity(intent);
                 break;
             case R.id.iv_create_order_contact:
                 IntentUtils.openContact(CreateOrderActivity.this, ReqCode.REQ_CONTACT);
@@ -95,7 +97,7 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
                 if (checkOrderData()) {
                     // 缓存订单数据到本地
                     saveToLocal();
-                    Intent intent = new Intent(mContext, CreateOrderSuccessActivity.class);
+                    intent = new Intent(mContext, CreateOrderSuccessActivity.class);
                     startActivity(intent);
                     finish();
                 }
@@ -144,6 +146,10 @@ public class CreateOrderActivity extends BaseActivity implements View.OnClickLis
         }
     }
 
+    /**
+     * 校验订单数据
+     * @return true：订单数据正确；false：订单数据有误
+     */
     private boolean checkOrderData() {
         mOrder.contact.name = mEtName.getText().toString().trim();
         mOrder.contact.tel = mEtPhone.getText().toString().trim();
